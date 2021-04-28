@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/activity_drawer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".stopWatch.StopWatch">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/b1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#ffffff"
+            android:layout_margin="8dp"
+            android:onClick="openNav"
+            android:src="@drawable/ic_hamburgerrr" />
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_alignParentTop="true"
+            android:fontFamily="sans-serif"
+            android:padding="16dp"
+            android:paddingStart="16dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            tools:ignore="RtlSymmetry" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_below="@+id/txtName"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/textColor"/>
+
+        <RelativeLayout
+            android:layout_below="@+id/view1"
+            android:layout_above="@+id/i1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_timer"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:background="@drawable/circular_bg"
+                android:padding="16dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="hr:min:sec"
+                android:textSize="50dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="60dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btn_stop"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/ic_stop" />
+
+                <ImageButton
+                    android:id="@+id/btn_play"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/ic_play" />
+
+                <ImageButton
+                    android:id="@+id/btn_paus"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/ic_pause" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <include
+            android:id="@+id/i1"
+            android:layout_height="64dp"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            layout="@layout/bottomnav2"/>
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#ffffff"
+        app:headerLayout="@layout/email_resource"
+        android:id="@+id/nv">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/v1"
+                android:layout_marginTop="80dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E5E5E5"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true" />
+
+            <Button
+                android:layout_below="@+id/v1"
+                android:layout_marginTop="8dp"
+                android:gravity="left|center"
+                android:layout_marginLeft="24dp"
+                android:textStyle="bold"
+                android:background="#00FFFFFF"
+                android:id="@+id/btn1"
+                android:onClick="changeLanguge"
+                android:text="@string/change_language"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="24dp" />
+
+            <View
+                android:id="@+id/v2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/btn1"
+                android:layout_marginTop="8dp"
+                android:background="#E5E5E5" />
+
+            <Button
+                android:layout_below="@+id/v2"
+                android:gravity="left|center"
+                android:layout_marginLeft="24dp"
+                android:id="@+id/btn2"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:background="#00FFFFFF"
+                android:text="@string/logout"
+                android:onClick="logout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="24dp" />
+
+            <View
+                android:id="@+id/v3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/btn2"
+                android:layout_marginTop="8dp"
+                android:background="#E5E5E5" />
+
+        </RelativeLayout>
+
+
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

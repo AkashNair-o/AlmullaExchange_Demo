@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "943217535876",
+    "project_id": "almullaexchange-b20ad",
+    "storage_bucket": "almullaexchange-b20ad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:943217535876:android:503ee3b07764b7d828cbd1",
+        "android_client_info": {
+          "package_name": "com.example.almullaexchange_demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "943217535876-1m1vo76gdniecjp0rusngk5vj9c13pm2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.almullaexchange_demo",
+            "certificate_hash": "32b960d50574dd3e8132a208d3321db9c6989cd5"
+          }
+        },
+        {
+          "client_id": "943217535876-1t8f3pmv6p66jggihl45ktktce47ijo0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoPDBBjg5BvxwISSbmG6hud-oH-7X_oXs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "943217535876-1t8f3pmv6p66jggihl45ktktce47ijo0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

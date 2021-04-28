@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".changeLanguage.Change_Language">
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_alignParentTop="true"
+        android:fontFamily="sans-serif"
+        android:padding="16dp"
+        android:onClick="backChnage"
+        android:paddingStart="16dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="@string/change_language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        tools:ignore="RtlSymmetry"
+        app:drawableStartCompat="@drawable/ic_back" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_below="@+id/txtName"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/textColor"/>
+
+    <RadioGroup
+        android:layout_margin="16dp"
+        android:padding="16dp"
+        android:layout_below="@+id/txtName"
+        android:id="@+id/lang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/radioEng"
+            android:paddingStart="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:text="@string/radioEng"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radioArabic"
+            android:layout_margin="8dp"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:paddingStart="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radioArabic" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/changeLang"
+        android:layout_below="@+id/lang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:background="@drawable/curve_bg"
+        android:fontFamily="casual"
+        android:text="Save" />
+
+</RelativeLayout>

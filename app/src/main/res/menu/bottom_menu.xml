@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/encryption"
+        android:title="@string/encryption"
+        android:icon="@drawable/ic_encryption" />
+
+    <item
+        android:id="@+id/todo"
+        android:title="@string/to_do"
+        android:icon="@drawable/ic_todo"/>
+
+    <item
+        android:id="@+id/stopwatch"
+        android:title="@string/stopwatch"
+        android:icon="@drawable/ic_stopwatch" />
+
+</menu>

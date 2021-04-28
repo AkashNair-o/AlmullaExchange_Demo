@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">AlmullaExchange_Demo</string>
+    <string name="demo_app">DEMO APP</string>
+    <string name="google_signIn">Sign In by Google</string>
+    <string name="logout">سجيل خروج</string>
+    <string name="something_wrong">Something Went Wrong!</string>
+    <string name="change_language">إلغاء</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="encrypted_decrypted_string">Encrypted / Decrypted String</string>
+    <string name="no_todo_tasks">No Tasks</string>
+    <string name="add_task">Add Task</string>
+    <string name="radioArabic">Arabic</string>
+    <string name="radioEng">English</string>
+
+    <string name="welcome"> أهال بك</string>
+    <string name="to_do">كى يفعل</string>
+    <string name="encryption">التشفير</string>
+    <string name="stopwatch">ساعة التوقيف</string>
+    <string name="message">رسالة</string>
+    <string name="secret_key">المفتاح السري</string>
+    <string name="encrypt">تشفير</string>
+    <string name="decrypt">فك تشفير</string>
+    <string name="delete">حذف</string>
+    <string name="are_you_sure"> المهمة؟ هذه حذف تريد أنك متأكد أنت ه</string>
+    <string name="are_you_sure_logout"> هل أنت متأكد أنك تريد تسجيل الخروج؟</string>
+
+    <string name="task_name">سم المهمة</string>
+    <string name="date_and_time">لتاريخ و الوقت</string>
+    <string name="save">أضف</string>
+    <string name="clear">واضح</string>
+    <string name="ok">حسنا</string>
+    <string name="cancel">إلغاء</string>
+</resources>
