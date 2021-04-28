@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
@@ -37,7 +39,7 @@ import java.util.List;
 
 public class ToDo extends AppCompatActivity
 {
-    TextView tvName;
+    TextView tvName, txtVersion;
     FirebaseAuth firebaseAuth;
     GoogleSignInClient googleSignInClient;
     private DrawerLayout dl;
@@ -110,6 +112,13 @@ public class ToDo extends AppCompatActivity
         });
 
         showData();
+        try {
+            PackageInfo pInfo = getApplicationContext().getPackageManager().getPackageInfo(getApplicationContext().getPackageName(), 0);
+            String version = pInfo.versionName;
+            txtVersion.setText("App Version: "+version);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     private void showData()
@@ -141,6 +150,7 @@ public class ToDo extends AppCompatActivity
     {
         firebaseAuth = FirebaseAuth.getInstance();
         tvName = findViewById(R.id.txtName);
+        txtVersion = findViewById(R.id.txtVersion);
         dl = (DrawerLayout) findViewById(R.id.activity_drawer);
 
         bottomNavigationView = findViewById(R.id.bottom_navigation2);

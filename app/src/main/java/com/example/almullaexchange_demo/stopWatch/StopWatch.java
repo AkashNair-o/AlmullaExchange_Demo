@@ -6,6 +6,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Gravity;
@@ -34,7 +36,7 @@ import java.util.Locale;
 
 public class StopWatch extends AppCompatActivity
 {
-    TextView tvName;
+    TextView tvName, txtVersion;
     FirebaseAuth firebaseAuth;
     GoogleSignInClient googleSignInClient;
     private DrawerLayout dl;
@@ -89,6 +91,14 @@ public class StopWatch extends AppCompatActivity
         });
 
         initTimmer();
+
+        try {
+            PackageInfo pInfo = getApplicationContext().getPackageManager().getPackageInfo(getApplicationContext().getPackageName(), 0);
+            String version = pInfo.versionName;
+            txtVersion.setText("App Version: "+version);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     private void initviews()
@@ -102,6 +112,7 @@ public class StopWatch extends AppCompatActivity
         bottomNavigationView.setSelectedItemId(R.id.stopwatch);
 
         txt_timer = findViewById(R.id.txt_timer);
+        txtVersion = findViewById(R.id.txtVersion);
         btn_paus= findViewById(R.id.btn_paus);
         btn_stop= findViewById(R.id.btn_stop);
         btn_play= findViewById(R.id.btn_play);

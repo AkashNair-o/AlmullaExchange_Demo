@@ -7,6 +7,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
@@ -38,7 +40,7 @@ import javax.crypto.spec.SecretKeySpec;
 
 public class Simple_Encryption_Decryption extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
 {
-    TextView tvName;
+    TextView tvName, txtVersion;
     FirebaseAuth firebaseAuth;
     GoogleSignInClient googleSignInClient;
     private DrawerLayout dl;
@@ -56,6 +58,7 @@ public class Simple_Encryption_Decryption extends AppCompatActivity implements N
 
         firebaseAuth = FirebaseAuth.getInstance();
         tvName = findViewById(R.id.txtName);
+        txtVersion = findViewById(R.id.txtVersion);
         et_secretKey = findViewById(R.id.et_secretKey);
         et_message = findViewById(R.id.et_message);
         txtoutput = findViewById(R.id.txtoutput);
@@ -106,6 +109,14 @@ public class Simple_Encryption_Decryption extends AppCompatActivity implements N
 
         googleSignInClient = GoogleSignIn.getClient(Simple_Encryption_Decryption.this,
                 GoogleSignInOptions.DEFAULT_SIGN_IN);
+
+        try {
+            PackageInfo pInfo = getApplicationContext().getPackageManager().getPackageInfo(getApplicationContext().getPackageName(), 0);
+            String version = pInfo.versionName;
+            txtVersion.setText("App Version: "+version);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
 
     }
 
